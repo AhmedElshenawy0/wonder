@@ -1,0 +1,76 @@
+.wrapper {
+  position: relative;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -150px;
+  }
+}
+
+.item {
+  position: absolute;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 10px;
+  left: max(calc(250px * 6), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/* .black-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0000006d;
+} */
+
+.item1 {
+  animation-delay: -5s;
+}
+.item2 {
+  animation-delay: -10s;
+}
+.item3 {
+  animation-delay: -15s;
+}
+.item4 {
+  animation-delay: -20s;
+}
+.item5 {
+  animation-delay: -25s;
+}
+.item6 {
+  animation-delay: -30s;
+}
+.item7 {
+  animation-delay: -35s;
+}
+.item8 {
+  animation-delay: -40s;
+}
+/* .wrapper:hover .item {
+  animation-play-state: paused;
+} */
+.item .image {
+  /* object-fit: cover; */
+  /* width: 200px;
+  border: 2px solid brown;
+  height: 200px; */
+}
